@@ -7,8 +7,10 @@ module.exports = {
   apiToken: process.env.API_TOKEN,
   idosell: {
     key: process.env.IDOSELL_API_KEY,
-    base: process.env.IDOSELL_API_BASE || 'https://zooart6.yourtechnicaldomain.com',
-    headerName: process.env.IDOSELL_API_HEADER_NAME || 'Authorization',
+    base: process.env.IDOSELL_API_BASE,
+    shopDomain: process.env.SHOP_DOMAIN,
+    headerName: process.env.IDOSELL_API_HEADER_NAME,
+    idosellPageLimit: process.env.IDOSELL_PAGE_LIMIT,
     fetchLimit: Number(process.env.IDOSELL_FETCH_LIMIT || 5000)
   },
   pollMinutes: Number(process.env.POLL_MINUTES || 5)

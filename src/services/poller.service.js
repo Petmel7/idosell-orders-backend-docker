@@ -18,7 +18,7 @@ async function upsertOrder(parsed) {
 }
 
 async function initialSync() {
-  const orders = await idosell.fetchAllOrders();
+  const orders = await idosell.fetchRecentOrders();
   for (const o of orders) await upsertOrder(o);
 }
 

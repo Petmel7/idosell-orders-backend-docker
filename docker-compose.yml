@@ -19,12 +19,12 @@ services:
     ports:
       - "3000:3000"
     environment:
-      - MONGO_URI=mongodb://mongo:27017/idosell
+      - MONGO_URI=mongodb+srv://youtubeAdmin:qwe2025@cluster0.2oeif0e.mongodb.net/idosellDB_doc?retryWrites=true&w=majority&appName=Cluster0
       - PORT=3000
       - API_TOKEN=change_me_secure_token
       - IDOSELL_API_KEY=${IDOSELL_API_KEY}
       - IDOSELL_API_HEADER_NAME=Authorization
-      - IDOSELL_API_BASE=https://zooart6.yourtechnicaldomain.com
+      - IDOSELL_API_BASE=https://zooart6.yourtechnicaldomain.com/api/admin/v7
       - POLL_MINUTES=5
       - IDOSELL_FETCH_LIMIT=5000
 
