@@ -7,6 +7,7 @@ const FINAL_STATUSES = new Set(['finished', 'lost', 'false']);
 async function upsertOrder(parsed) {
   if (!parsed || !parsed.orderId) return null;
   const existing = await Order.findOne({ orderId: parsed.orderId });
+  console.log('♻️existing', existing);
   if (existing) {
     if (existing.status && FINAL_STATUSES.has(String(existing.status))) return existing;
     Object.assign(existing, parsed);
